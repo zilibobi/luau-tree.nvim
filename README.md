@@ -1,9 +1,8 @@
 # luau-tree.nvim
-A 100% Lua HTTP/1.1 server for bringing your Roblox DataMode into Neovim.
+Luau-tree is a 100% Lua HTTP/1.1 server for bringing your Roblox DataModel into Neovim.
 
 ## Installation
-Use a package manager of your choice or install 
-
+Use a package manager of your choice or clone this repo yourself.
 Here is an example using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
@@ -41,7 +40,7 @@ local hook = config:hook("enabled", function(value)
   print(tostring(value) .. " is the new value of 'enabled'.")
 end)
 
--- Unhook the function
+-- Unhook the function.
 hook:unhook()
 ```
 
@@ -49,7 +48,8 @@ hook:unhook()
 Use the server API to create your own apps.
 
 > [!WARNING]
-> The server code is not tested and may be vulnerable to attacks. **Do not use it in production**.
+> The server code is not tested and may be vulnerable to attacks.
+> **Do not use it in production**.
 
 Here is an example that entirely documents the built-in server API:
 ```lua
@@ -99,7 +99,7 @@ listener:disconnect()
 -- Can only be called once.
 
 -- Listeners added after this function will still work, but it's generally
--- a good idea to call this function after all listeners have bee added.
+-- a good idea to call this function after all listeners have been added.
 app:listen("127.0.0.1", 9834)
 
 -- Stops accepting messages from clients.
