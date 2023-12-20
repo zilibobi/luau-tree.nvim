@@ -93,7 +93,7 @@ end, false) -- The last argument: 'force' (optional) - indicates whether to over
 -- listener for this path and method, otherwise an error will be thrown.
 
 -- Stop listening to GET requests on this path.
-listener:disconnect()
+listener:destroy()
 
 -- Binds the server to the specified host and port.
 -- Can only be called once.
